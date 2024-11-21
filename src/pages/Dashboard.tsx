@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+      <h1 className="text-3xl font-bold text-gray-900">Painel</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Link
@@ -16,8 +16,8 @@ const Dashboard = () => {
               <Truck className="h-6 w-6 text-blue-600" />
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-gray-900">Trucks</h2>
-              <p className="text-gray-600">Manage your fleet</p>
+              <h2 className="text-xl font-semibold text-gray-900">Caminhões</h2>
+              <p className="text-gray-600">Gerencie sua frota</p>
             </div>
           </div>
         </Link>
@@ -31,8 +31,8 @@ const Dashboard = () => {
               <Users className="h-6 w-6 text-green-600" />
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-gray-900">Employees</h2>
-              <p className="text-gray-600">Manage your team</p>
+              <h2 className="text-xl font-semibold text-gray-900">Funcionários</h2>
+              <p className="text-gray-600">Gerencie sua equipe</p>
             </div>
           </div>
         </Link>
@@ -46,8 +46,8 @@ const Dashboard = () => {
               <UserCircle className="h-6 w-6 text-purple-600" />
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-gray-900">Users</h2>
-              <p className="text-gray-600">Manage system access</p>
+              <h2 className="text-xl font-semibold text-gray-900">Usuários</h2>
+              <p className="text-gray-600">Gerencie o acesso ao sistema</p>
             </div>
           </div>
         </Link>

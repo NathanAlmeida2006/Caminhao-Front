@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Truck className="h-8 w-8" />
-            <span className="text-xl font-bold">TransportPro</span>
+            <span className="text-xl font-bold">Transportadora</span>
           </Link>
           
           <div className="flex space-x-4">
@@ -23,7 +23,7 @@ const Navbar = () => {
               className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors ${isActive('/')}`}
             >
               <LayoutDashboard className="h-4 w-4" />
-              <span>Dashboard</span>
+              <span>Painel</span>
             </Link>
             
             <Link
@@ -31,7 +31,7 @@ const Navbar = () => {
               className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors ${isActive('/trucks')}`}
             >
               <Truck className="h-4 w-4" />
-              <span>Trucks</span>
+              <span>Caminhões</span>
             </Link>
             
             <Link
@@ -39,7 +39,7 @@ const Navbar = () => {
               className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors ${isActive('/employees')}`}
             >
               <Users className="h-4 w-4" />
-              <span>Employees</span>
+              <span>Funcionários</span>
             </Link>
             
             <Link
@@ -47,7 +47,7 @@ const Navbar = () => {
               className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors ${isActive('/users')}`}
             >
               <UserCircle className="h-4 w-4" />
-              <span>Users</span>
+              <span>Usuários</span>
             </Link>
           </div>
         </div>

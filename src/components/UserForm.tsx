@@ -25,14 +25,14 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
     try {
       if (user) {
         await axios.put(`http://localhost:8080/api/usuarios/${user.id}`, data);
-        toast.success('User updated successfully');
+        toast.success('Usuário atualizado com sucesso');
       } else {
         await axios.post('http://localhost:8080/api/usuarios', data);
-        toast.success('User created successfully');
+        toast.success('Usuário criado com sucesso');
       }
       onSuccess();
     } catch (error) {
-      toast.error('Failed to save user');
+      toast.error('Falha ao salvar usuário');
     }
   };
 
@@ -40,7 +40,7 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">{user ? 'Edit User' : 'Add New User'}</h2>
+          <h2 className="text-xl font-bold">{user ? 'Editar usuário' : 'Adicionar novo usuário'}</h2>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
             <X className="h-6 w-6" />
           </button>
@@ -48,9 +48,9 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <label className="block text-sm font-medium text-gray-700">Nome</label>
             <input
-              {...register('nome', { required: 'Name is required' })}
+              {...register('nome', { required: 'Nome é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.nome && <p className="mt-1 text-sm text-red-600">{errors.nome.message}</p>}
@@ -60,14 +60,14 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              {...register('email', { required: 'Email is required' })}
+              {...register('email', { required: 'Email é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <label className="block text-sm font-medium text-gray-700">Senha</label>
             <input
               type="password"
               {...register('senha', { required: !user })}
@@ -77,9 +77,9 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Role</label>
+            <label className="block text-sm font-medium text-gray-700">Cargo</label>
             <input
-              {...register('cargo', { required: 'Role is required' })}
+              {...register('cargo', { required: 'Cargo é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.cargo && <p className="mt-1 text-sm text-red-600">{errors.cargo.message}</p>}
@@ -91,13 +91,13 @@ const UserForm = ({ user, onClose, onSuccess }: UserFormProps) => {
               onClick={onClose}
               className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="submit"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
             >
-              {user ? 'Update' : 'Create'}
+              {user ? 'Atualizar' : 'Criar'}
             </button>
           </div>
         </form>

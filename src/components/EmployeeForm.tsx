@@ -36,14 +36,14 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
     try {
       if (employee) {
         await axios.put(`http://localhost:8080/api/funcionarios/${employee.id}`, data);
-        toast.success('Employee updated successfully');
+        toast.success('Funcionário atualizado com sucesso');
       } else {
         await axios.post('http://localhost:8080/api/funcionarios', data);
-        toast.success('Employee created successfully');
+        toast.success('Funcionário criado com sucesso');
       }
       onSuccess();
     } catch (error) {
-      toast.error('Failed to save employee');
+      toast.error('Falha ao salvar funcionário');
     }
   };
 
@@ -51,7 +51,7 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-md">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">{employee ? 'Edit Employee' : 'Add New Employee'}</h2>
+          <h2 className="text-xl font-bold">{employee ? 'Editar funcionário' : 'Adicionar novo funcionário'}</h2>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
             <X className="h-6 w-6" />
           </button>
@@ -59,9 +59,9 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <label className="block text-sm font-medium text-gray-700">Nome</label>
             <input
-              {...register('nome', { required: 'Name is required' })}
+              {...register('nome', { required: 'Nome é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.nome && <p className="mt-1 text-sm text-red-600">{errors.nome.message}</p>}
@@ -70,7 +70,7 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
           <div>
             <label className="block text-sm font-medium text-gray-700">CPF</label>
             <input
-              {...register('cpf', { required: 'CPF is required' })}
+              {...register('cpf', { required: 'CPF é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.cpf && <p className="mt-1 text-sm text-red-600">{errors.cpf.message}</p>}
@@ -79,26 +79,26 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
           <div>
             <label className="block text-sm font-medium text-gray-700">RG</label>
             <input
-              {...register('rg', { required: 'RG is required' })}
+              {...register('rg', { required: 'RG é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.rg && <p className="mt-1 text-sm text-red-600">{errors.rg.message}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Birth Date</label>
+            <label className="block text-sm font-medium text-gray-700">Data de nascimento</label>
             <input
               type="date"
-              {...register('dataNascimento', { required: 'Birth date is required' })}
+              {...register('dataNascimento', { required: 'Data de nascimento é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.dataNascimento && <p className="mt-1 text-sm text-red-600">{errors.dataNascimento.message}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Position</label>
+            <label className="block text-sm font-medium text-gray-700">Cargo</label>
             <input
-              {...register('cargo', { required: 'Position is required' })}
+              {...register('cargo', { required: 'Cargo é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.cargo && <p className="mt-1 text-sm text-red-600">{errors.cargo.message}</p>}
@@ -108,16 +108,16 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
             <label className="block text-sm font-medium text-gray-700">Email</label>
             <input
               type="email"
-              {...register('email', { required: 'Email is required' })}
+              {...register('email', { required: 'Email é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Phone</label>
+            <label className="block text-sm font-medium text-gray-700">Telefone</label>
             <input
-              {...register('telefone', { required: 'Phone is required' })}
+              {...register('telefone', { required: 'Celular é obrigatório' })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             />
             {errors.telefone && <p className="mt-1 text-sm text-red-600">{errors.telefone.message}</p>}
@@ -131,13 +131,13 @@ const EmployeeForm = ({ employee, onClose, onSuccess }: EmployeeFormProps) => {
               onClick={onClose}
               className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
             >
-              Cancel
+              Cancelar
             </button>
             <button
               type="submit"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
             >
-              {employee ? 'Update' : 'Create'}
+              {employee ? 'Atualizar' : 'Criar'}
             </button>
           </div>
         </form>
