@@ -80,14 +80,14 @@ const Users = () => {
 
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
+          <thead className="bg-gray-400">
             <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Senha</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cargo</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">ID</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Nome</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Email</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Senha</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Cargo</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Ações</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">

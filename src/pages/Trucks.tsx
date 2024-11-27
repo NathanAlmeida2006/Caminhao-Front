@@ -82,16 +82,16 @@ const Trucks = () => {
 
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
+          <thead className="bg-gray-400">
             <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Placa</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modelo</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cor</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fabricante</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Número de chassi</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Capacidade de carga</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">ID</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Placa</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Modelo</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Cor</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Fabricante</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Número de chassi</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Capacidade de carga</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Ações</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
