@@ -56,7 +56,7 @@ const Users = () => {
             setEditingUser(null);
             setShowForm(true);
           }}
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center space-x-2"
+          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors flex items-center space-x-2"
         >
           <Plus className="h-4 w-4" />
           <span>Adicionar usuário</span>
